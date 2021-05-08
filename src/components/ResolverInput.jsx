@@ -12,9 +12,18 @@ export class ResolverInput extends Component {
 	}
 
 	resolve() {
+		let did;
+		const splitDid = encodeURIComponent(this.state.input).split("did:ipdid")
+		if(splitDid.length==2){
+			did = splitDid[1];
+		}else{
+			did = encodeURIComponent(this.state.input);
+		}
+		console.log(`https://universal-resolver-driver-frankwang95174.vercel.app/1.0/identifiers/${did}`);
 		axios
-			.get( determineHostName() + '1.0/identifiers/' + encodeURIComponent(this.state.input))
+			.get(`https://universal-resolver-driver-frankwang95174.vercel.app/1.0/identifiers/${did}`)
 			.then(response => {
+				console.log(response);
 				const didDocument = response.data.didDocument;
 				const didResolutionMetadata = response.data.didResolutionMetadata;
 				const didDocumentMetadata = response.data.didDocumentMetadata;
@@ -54,6 +63,7 @@ export class ResolverInput extends Component {
 
 	onClickResolve() {
 		this.props.onLoading();
+		console.log("resolve button clicked");
 		this.resolve();
 	}
 

@@ -51,9 +51,11 @@ export class App extends Component {
 			{name: 'did:trustbloc'},
 			{name: 'did:bitxhub'},
 			{name: 'did:sol'},
-			{name: 'did:lit'}
+			{name: 'did:lit'},
+			{name: 'did:ipdid'}
 		];
 		this.examples = [
+			"did:ipdid:ming",
 			'did:sov:WRfXPg8dantKVubE3HX8pw',
 			'did:sov:CYQLsccvwhMTowprMjGjQ6',
 			'did:sov:builder:VbPQNHsvoLZdaNU7fTBeFx',
@@ -119,7 +121,7 @@ export class App extends Component {
 			"did:trustbloc:testnet.trustbloc.dev:EiBLTZcCj6u_XsufSuLVh2zbPEREjDcu8bnPgs0XyKkfPQ",
 			"did:bitxhub:appchain001:0xc7F999b83Af6DF9e67d0a37Ee7e900bF38b3D013",
 			"did:sol:ygGfLvAyuRymPNv2fJDK1ZMpdy59m8cV5dak6A8uHKa",
-			"did:lit:AEZ87t1bi5bRxmVh3ksMUi"
+			"did:lit:AEZ87t1bi5bRxmVh3ksMUi",
 		];
 		this.examples.sort();
 		this.state = { drivers: this.drivers };
@@ -136,7 +138,7 @@ export class App extends Component {
 			}
 			autoResolve = true;
 		} else {
-			did = 'did:elem:EiAS3mqC4OLMKOwcz3ItIL7XfWduPT7q3Fa4vHgiCfSG2A';
+			did = 'did:ipdid:0xtestaddr';
 			autoResolve = false;
 		}
 		return (
