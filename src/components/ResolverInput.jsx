@@ -19,9 +19,9 @@ export class ResolverInput extends Component {
 		}else{
 			did = encodeURIComponent(this.state.input);
 		}
-		console.log(`https://universal-resolver-driver-frankwang95174.vercel.app/1.0/identifiers/${did}`);
+		console.log(`https://universal-resolver-driver-henna.vercel.app/1.0/identifiers/${did}`);
 		axios
-			.get(`https://universal-resolver-driver-frankwang95174.vercel.app/1.0/identifiers/${did}`)
+			.get(`https://universal-resolver-driver-henna.vercel.app/1.0/identifiers/${did}`)
 			.then(response => {
 				console.log(response);
 				const didDocument = response.data.didDocument;

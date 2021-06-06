@@ -55,7 +55,7 @@ export class App extends Component {
 			{name: 'did:ipdid'}
 		];
 		this.examples = [
-			"did:ipdid:ming",
+			"did:ipdid:QmaPTKopqFMgapNNsHKFoPELdmAQm3u2yFxMd1q8jABBo5",
 			'did:sov:WRfXPg8dantKVubE3HX8pw',
 			'did:sov:CYQLsccvwhMTowprMjGjQ6',
 			'did:sov:builder:VbPQNHsvoLZdaNU7fTBeFx',
@@ -138,7 +138,7 @@ export class App extends Component {
 			}
 			autoResolve = true;
 		} else {
-			did = 'did:ipdid:0xtestaddr';
+			did = 'did:ipdid:QmaPTKopqFMgapNNsHKFoPELdmAQm3u2yFxMd1q8jABBo5';
 			autoResolve = false;
 		}
 		return (
